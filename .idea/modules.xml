@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/RyanShop.iml" filepath="$PROJECT_DIR$/RyanShop.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ryan-annotations/ryan-annotations.iml" filepath="$PROJECT_DIR$/ryan-annotations/ryan-annotations.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ryan-complier/ryan-complier.iml" filepath="$PROJECT_DIR$/ryan-complier/ryan-complier.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ryan-core/ryan-core.iml" filepath="$PROJECT_DIR$/ryan-core/ryan-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ryan-ec/ryan-ec.iml" filepath="$PROJECT_DIR$/ryan-ec/ryan-ec.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ryan-ui/ryan-ui.iml" filepath="$PROJECT_DIR$/ryan-ui/ryan-ui.iml" />
+    </modules>
+  </component>
+</project>
