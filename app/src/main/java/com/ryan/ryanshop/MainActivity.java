@@ -1,13 +1,13 @@
 package com.ryan.ryanshop;
 
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
+import com.ryan.shop.core.activity.ProxyActivity;
+import com.ryan.shop.core.delegate.RyanDelegate;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends ProxyActivity {
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+    public RyanDelegate setRootDelegate() {
+        return new MainDelegate();
     }
+
 }
