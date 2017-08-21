@@ -4,8 +4,10 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.AsyncTask;
 
+import com.ryan.shop.core.app.Ryan;
 import com.ryan.shop.core.net.callback.IRequest;
 import com.ryan.shop.core.net.callback.ISuccess;
+import com.ryan.shop.core.util.file.FileUtil;
 
 import java.io.File;
 import java.io.InputStream;
@@ -64,7 +66,7 @@ final class SaveFileTask extends AsyncTask<Object, Void, File> {
             install.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             install.setAction(Intent.ACTION_VIEW);
             install.setDataAndType(Uri.fromFile(file), "application/vnd.android.package-archive");
-            Latte.getApplicationContext().startActivity(install);
+            Ryan.getApplicationContext().startActivity(install);
         }
     }
 }

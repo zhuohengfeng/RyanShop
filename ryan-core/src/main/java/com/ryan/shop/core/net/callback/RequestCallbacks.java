@@ -3,7 +3,10 @@ package com.ryan.shop.core.net.callback;
 import android.os.Handler;
 
 import com.ryan.shop.core.app.ConfigKeys;
+import com.ryan.shop.core.app.Ryan;
 import com.ryan.shop.core.net.RestCreator;
+import com.ryan.shop.core.ui.loader.LoaderStyle;
+import com.ryan.shop.core.ui.loader.RyanLoader;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -20,7 +23,7 @@ public final class RequestCallbacks implements Callback<String> {
     private final IFailure FAILURE;
     private final IError ERROR;
     private final LoaderStyle LOADER_STYLE;
-    private static final Handler HANDLER = Latte.getHandler();
+    private static final Handler HANDLER = Ryan.getHandler();
 
     public RequestCallbacks(IRequest request, ISuccess success, IFailure failure, IError error, LoaderStyle style) {
         this.REQUEST = request;
@@ -60,13 +63,13 @@ public final class RequestCallbacks implements Callback<String> {
     }
 
     private void onRequestFinish() {
-        final long delayed = Latte.getConfiguration(ConfigKeys.LOADER_DELAYED);
+        final long delayed = Ryan.getConfiguration(ConfigKeys.LOADER_DELAYED);
         if (LOADER_STYLE != null) {
             HANDLER.postDelayed(new Runnable() {
                 @Override
                 public void run() {
                     RestCreator.getParams().clear();
-                    LatteLoader.stopLoading();
+                    RyanLoader.stopLoading();
                 }
             }, delayed);
         }

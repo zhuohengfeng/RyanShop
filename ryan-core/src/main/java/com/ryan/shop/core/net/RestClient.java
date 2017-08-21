@@ -8,6 +8,8 @@ import com.ryan.shop.core.net.callback.IRequest;
 import com.ryan.shop.core.net.callback.ISuccess;
 import com.ryan.shop.core.net.callback.RequestCallbacks;
 import com.ryan.shop.core.net.download.DownloadHandler;
+import com.ryan.shop.core.ui.loader.LoaderStyle;
+import com.ryan.shop.core.ui.loader.RyanLoader;
 
 import java.io.File;
 import java.util.Map;
@@ -16,7 +18,6 @@ import java.util.WeakHashMap;
 import okhttp3.MediaType;
 import okhttp3.MultipartBody;
 import okhttp3.RequestBody;
-import okhttp3.internal.http.HttpMethod;
 import retrofit2.Call;
 import retrofit2.Callback;
 
@@ -81,7 +82,7 @@ public final class RestClient {
         }
 
         if (LOADER_STYLE != null) {
-            LatteLoader.showLoading(CONTEXT, LOADER_STYLE);
+            RyanLoader.showLoading(CONTEXT, LOADER_STYLE);
         }
 
         switch (method) {

@@ -2,6 +2,12 @@ package com.ryan.shop.core.net;
 
 import android.content.Context;
 
+import com.ryan.shop.core.net.callback.IError;
+import com.ryan.shop.core.net.callback.IFailure;
+import com.ryan.shop.core.net.callback.IRequest;
+import com.ryan.shop.core.net.callback.ISuccess;
+import com.ryan.shop.core.ui.loader.LoaderStyle;
+
 import java.io.File;
 import java.util.WeakHashMap;
 

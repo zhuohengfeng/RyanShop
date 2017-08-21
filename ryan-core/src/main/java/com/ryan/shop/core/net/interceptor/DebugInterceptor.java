@@ -3,6 +3,8 @@ package com.ryan.shop.core.net.interceptor;
 import android.support.annotation.NonNull;
 import android.support.annotation.RawRes;
 
+import com.ryan.shop.core.util.file.FileUtil;
+
 import java.io.IOException;
 
 import okhttp3.MediaType;
