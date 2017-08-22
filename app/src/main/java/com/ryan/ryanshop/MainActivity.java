@@ -25,7 +25,7 @@ public class MainActivity extends ProxyActivity implements
             actionBar.hide();
         }
         Ryan.getConfigurator().withActivity(this);
-        StatusBarCompat.translucentStatusBar(this, true);
+        //StatusBarCompat.translucentStatusBar(this, true);
     }
 
     @Override
@@ -60,7 +60,7 @@ public class MainActivity extends ProxyActivity implements
         switch (tag) {
             case SIGNED:
 //                Toast.makeText(this, "启动结束，用户登录了", Toast.LENGTH_LONG).show();
-                getSupportDelegate().startWithPop(new EcBottomDelegate());
+                getSupportDelegate().startWithPop(new MainDelegate()/*EcBottomDelegate()*/);
                 break;
             case NOT_SIGNED:
 //                Toast.makeText(this, "启动结束，用户没登录", Toast.LENGTH_LONG).show();
